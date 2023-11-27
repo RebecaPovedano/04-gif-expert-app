@@ -9,9 +9,5 @@ export default defineConfig({
   preview: {
     port: 8080
   },
-  build: {
-    minify: 'terser', // o 'esbuild' para un minificador más rápido
-    target: 'esnext'
-  },
 
 })
