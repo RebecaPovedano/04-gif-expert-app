@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import PropTypes from 'prop-types';
+
 import { GifItem } from "./GifItem";
 
 import { useFetchGifs } from "../hooks/useFetchGifs";
@@ -7,17 +9,6 @@ import { useFetchGifs } from "../hooks/useFetchGifs";
 export const GifGrid = ({category}) => {
 
   const { images, isLoading } = useFetchGifs( category );
-
-  console.log({ images, isLoading });
-
-  // const [images, setImages] = useState([]);
-  // const [isLoading, setIsLoading] = useState(true);
-
-  // useEffect( () => {    
-  //   getGif(category).then(
-  //     newImages => setImages(newImages)
-  //   );
-  // }, [] );
 
   return (
     <>
@@ -39,4 +30,8 @@ export const GifGrid = ({category}) => {
         </div>
     </>
   )
+}
+
+GifGrid.propTypes = {
+  category: PropTypes.string.isRequired
 }

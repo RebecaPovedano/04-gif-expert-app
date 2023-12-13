@@ -25,6 +25,7 @@ export const AddCategory = ({onNewCategory}) => {
             placeholder="Buscar gifs"
             value={inputValue}
             onChange={ onInputChange}
+            aria-label="input" 
         />
     </form>
   )
